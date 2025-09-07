@@ -116,6 +116,11 @@ const inputClass =
   "transition duration-300 shadow-sm focus:shadow-lg";
 
   const sectionTitle = "text-lg font-semibold mb-4";
+  //combine submit and generate pdf
+  const handleClick = () => {
+  generatePDF();
+  handleSubmit();
+};
 
   return (
   <div
@@ -538,18 +543,7 @@ const inputClass =
               </div>
             </div>
           </div>
-          
           {/* Submit Button */}
-     <div className="flex justify-center gap-4">
-            <button
-              type="button"
-              onClick={handleSubmit}
-              className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
-              disabled={loading}
-            >
-              {loading ? "Submitting..." : "Submit"}
-            </button>
-
             <button
               type="button"
               onClick={fetchGCData}
@@ -562,17 +556,15 @@ const inputClass =
             {/* ADD THIS BUTTON: PDF Generation */}
             <button
               type="button"
-              onClick={generatePDF}
+              onClick={handleClick}
               className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
               disabled={pdfLoading}
             >
               {pdfLoading ? "Generating PDF..." : "Generate PDF"}
             </button>
           </div>
-
           {message && <p className="text-center text-sm mt-2">{message}</p>}
         </div>
       </div>
-    </div>
   );
 }
