@@ -29,14 +29,21 @@ export async function POST(request) {
 
     
     // Load images from public folder or URL and convert to base64
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+   // ✅ Always resolve the correct domain (works on localhost & Vercel)
+const { origin: baseUrl } = new URL(request.url);
 
-    // Convert image URL to base64
-    async function urlToBase64(url) {
-      const res = await fetch(url);
-      const buffer = Buffer.from(await res.arrayBuffer());
-      return `data:image/png;base64,${buffer.toString("base64")}`;
-    }
+async function urlToBase64(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.statusText}`);
+
+    const buffer = Buffer.from(await res.arrayBuffer());
+    return `data:image/png;base64,${buffer.toString("base64")}`;
+  } catch (err) {
+    console.error("Image load error:", err.message);
+    return null; // return null if image fails, so PDF can still generate
+  }
+}
 
     // Load images
     const archBase64 = await urlToBase64(`${baseUrl}/arch.png`);
