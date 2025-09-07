@@ -552,7 +552,9 @@ const inputClass =
             >
               {loading ? "Fetching..." : "Fetch"}
             </button> 
-
+<div>
+  
+</div>
             {/* ADD THIS BUTTON: PDF Generation */}
             <button
               type="button"
