@@ -117,6 +117,7 @@ const inputClass =
 
   const sectionTitle = "text-lg font-semibold mb-4";
   
+  
 
   return (
   <div
@@ -552,17 +553,15 @@ const inputClass =
   <button
               type="button"
               onClick={handleSubmit}
-<<<<<<< HEAD
               className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-blue-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
               disabled={pdfLoading}
             >
+
               {pdfLoading ? "Submitting" : "Submit"}
-=======
               className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
               disabled={pdfLoading}
-            >
               {pdfLoading ? "Submit" : "Submitting"}
->>>>>>> 075ec20 (first commit)
+
             </button>
 </div>
             {/* ADD THIS BUTTON: PDF Generation */}
