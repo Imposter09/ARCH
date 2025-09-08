@@ -565,7 +565,7 @@ const inputClass =
               className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
               disabled={pdfLoading}
             >
-              {pdfLoading ? "Generating PDF..." : "Generate PDF"}
+              {pdfLoading ? "Generating pDF..." : "Generate PDF"}
             </button>
           </div>
           {message && <p className="text-center text-sm mt-2">{message}</p>}
