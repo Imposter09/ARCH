@@ -116,11 +116,7 @@ const inputClass =
   "transition duration-300 shadow-sm focus:shadow-lg";
 
   const sectionTitle = "text-lg font-semibold mb-4";
-  //combine submit and generate pdf
-  const handleClick = () => {
-  generatePDF();
-  handleSubmit();
-};
+  
 
   return (
   <div
@@ -553,12 +549,19 @@ const inputClass =
               {loading ? "Fetching..." : "Fetch"}
             </button> 
 <div>
-  
+  button
+              type="button"
+              onClick={handleSubmit}
+              className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+              disabled={pdfLoading}
+            >
+              {pdfLoading ? "Submit" : "Submitting"}
+            </button>
 </div>
             {/* ADD THIS BUTTON: PDF Generation */}
             <button
               type="button"
-              onClick={handleClick}
+              onClick={generatePDF}
               className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
               disabled={pdfLoading}
             >
