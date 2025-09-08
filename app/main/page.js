@@ -552,7 +552,7 @@ const inputClass =
   <button
               type="button"
               onClick={handleSubmit}
-              className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+              className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
               disabled={pdfLoading}
             >
               {pdfLoading ? "Submit" : "Submitting"}
