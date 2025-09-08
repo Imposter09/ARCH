@@ -549,7 +549,7 @@ const inputClass =
               {loading ? "Fetching..." : "Fetch"}
             </button> 
 <div>
-  button
+  <button
               type="button"
               onClick={handleSubmit}
               className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
