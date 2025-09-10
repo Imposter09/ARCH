@@ -540,6 +540,7 @@ const inputClass =
               </div>
             </div>
           </div>
+          <div>
           {/* Submit Button */}
             <button
               type="button"
@@ -549,6 +550,7 @@ const inputClass =
             >
               {loading ? "Fetching..." : "Fetch"}
             </button> 
+            </div>
 <div>
   <button
               type="button"
@@ -559,6 +561,7 @@ const inputClass =
               {pdfLoading ? "Submitting" : "Submit"}
             </button>
 </div>
+<div>
             {/* ADD THIS BUTTON: PDF Generation */}
             <button
               type="button"
@@ -568,6 +571,7 @@ const inputClass =
             >
               {pdfLoading ? "Generating PDF..." : "Generate PDF"}
             </button>
+          </div>
           </div>
           {message && <p className="text-center text-sm mt-2">{message}</p>}
         </div>
