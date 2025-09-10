@@ -549,7 +549,15 @@ const inputClass =
               disabled={loading}
             >
               {loading ? "Fetching..." : "Fetch"}
-            </button> 
+          </button> 
+            <button
+            type="button"
+            onClick={generatePDF}
+            className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+            disabled={pdfLoading}
+          >
+            {pdfLoading ? "Generating PDF..." : "Generate PDF"}
+          </button>
             
   <button
               type="button"
@@ -560,14 +568,7 @@ const inputClass =
               {pdfLoading ? "Submitting" : "Submit"}
             </button>
             {/* ADD THIS BUTTON: PDF Generation */}
-            <button
-              type="button"
-              onClick={generatePDF}
-              className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-red-600 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
-              disabled={pdfLoading}
-            >
-              {pdfLoading ? "Generating PDF..." : "Generate PDF"}
-            </button>
+          
           </div>
           </div>
           </div>
