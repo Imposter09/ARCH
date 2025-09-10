@@ -550,8 +550,7 @@ const inputClass =
             >
               {loading ? "Fetching..." : "Fetch"}
             </button> 
-            </div>
-          <div className="flex justify-center">
+            
   <button
               type="button"
               onClick={handleSubmit}
@@ -561,7 +560,6 @@ const inputClass =
               {pdfLoading ? "Submitting" : "Submit"}
             </button>
 </div>
-          <div className="flex justify-center">
             {/* ADD THIS BUTTON: PDF Generation */}
             <button
               type="button"
@@ -575,6 +573,5 @@ const inputClass =
           </div>
           {message && <p className="text-center text-sm mt-2">{message}</p>}
         </div>
-      </div>
   );
 }
