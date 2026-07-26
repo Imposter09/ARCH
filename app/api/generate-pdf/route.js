@@ -48,6 +48,7 @@ async function urlToBase64(url) {
     // Load images
     const archBase64 = await urlToBase64(`${baseUrl}/arch.png`);
     const signBase64 = await urlToBase64(`${baseUrl}/sign.png`);
+    const stampBase64 = await urlToBase64(`${baseUrl}/stamp.png`);
 
     // Add images to PDF
     pdf.addImage(archBase64, "PNG", 5, -3, 35, 35);   // Logo
@@ -159,7 +160,7 @@ async function urlToBase64(url) {
     pdf.addImage(signBase64, "PNG", 220, 125, 25, 25); // Signature
 
     pdf.text('Stamp & Sign', 202, 150);
-    pdf.addImage(signBase64, "PNG", 220, 143, 25, 25); // Signature
+    pdf.addImage(stampBase64, "PNG", 220, 143, 25, 25); // stamp
 
     pdf.text('Name and Sign of Consignor', 82, 132);
     pdf.text('Received By : ', 82, 150);
