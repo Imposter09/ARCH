@@ -158,7 +158,7 @@ async function urlToBase64(url) {
     // Signature sections
     pdf.text('For ARCH FREIGHTS PVT LTD', 202, 132);
     pdf.text('Stamp & Sign', 202, 150);
-    pdf.addImage(signBase64, "PNG", 220, 165, 25, 25); // Signature
+    pdf.addImage(signBase64, "PNG", 220, 157, 25, 25); // Signature
 
     pdf.text('Name and Sign of Consignor', 82, 132);
     pdf.text('Received By : ', 82, 150);
