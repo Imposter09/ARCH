@@ -51,7 +51,6 @@ async function urlToBase64(url) {
 
     // Add images to PDF
     pdf.addImage(archBase64, "PNG", 5, -3, 35, 35);   // Logo
-    pdf.addImage(signBase64, "PNG", 220, 125, 25, 25); // Signature
 
     // Company Header
     pdf.setFontSize(15);
@@ -157,8 +156,10 @@ async function urlToBase64(url) {
 
     // Signature sections
     pdf.text('For ARCH FREIGHTS PVT LTD', 202, 132);
+    pdf.addImage(signBase64, "PNG", 220, 125, 25, 25); // Signature
+
     pdf.text('Stamp & Sign', 202, 150);
-    pdf.addImage(signBase64, "PNG", 220, 157, 25, 25); // Signature
+    pdf.addImage(signBase64, "PNG", 220, 152, 25, 25); // Signature
 
     pdf.text('Name and Sign of Consignor', 82, 132);
     pdf.text('Received By : ', 82, 150);
