@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const uri = "mongodb+srv://MALHAR:malharpat@archdata.esibp8q.mongodb.net/testdb?retryWrites=true&w=majority";
+const uri = "mongodb+srv://MALHAR:1234567890@archdata.esibp8q.mongodb.net/testdb?retryWrites=true&w=majority";
 const dbName = "transportDB";
 
 let client;
